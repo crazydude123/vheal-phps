@@ -27,7 +27,7 @@ $row= mysqli_fetch_row($result1);
                 set patientname = '$patient_name', patientage= '$patient_age', 
                 patientlocation= '$patient_pincode', patientdisease= '$patient_disease'
                 patientdoctor= '$patient_doctoryes'
-                where patientphone like '$patient_phone';";
+                where patientphone = '$patient_phone';";
 $result2= mysqli_query($conn, $mysql_qry2);
 echo "Patient details uploaded";
 }
