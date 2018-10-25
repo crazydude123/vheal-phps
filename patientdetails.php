@@ -27,7 +27,7 @@ $mysql_qry2 = "update patienttable
                 SET patientname = '$patient_name', patientage= '$patient_age', 
                     patientlocation= '$patient_pincode', patientdisease= '$patient_disease'
                     patientdoctor= '$patient_doctoryes'
-                WHERE patientphone = '$patient_phone';";
+                WHERE patientphone === '$patient_phone';";
 $result2= mysqli_query($conn, $mysql_qry2);
 if($conn->query($mysql_qry2) === TRUE){
 echo "Patient details uploaded";
