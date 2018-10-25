@@ -29,7 +29,11 @@ $mysql_qry2 = "update patienttable
                     patientdoctor= '$patient_doctoryes'
                 WHERE patientphone = '$patient_phone';";
 $result2= mysqli_query($conn, $mysql_qry2);
+if($conn->query($mysql_qry2) === TRUE){
 echo "Patient details uploaded";
+}
+else
+echo "idgaf";
 }
 else if(mysqli_num_rows($result1) === 0){
      $flag=1;
