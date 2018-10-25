@@ -23,7 +23,7 @@ $flag = 0;
 if(mysqli_num_rows($result1) > 0) 
 {
 $row= mysqli_fetch_row($result1);
- $mysql_qry2 = "update patienttable 
+$mysql_qry2 = "update patienttable 
                 SET patientname = '$patient_name', patientage= '$patient_age', 
                 patientlocation= '$patient_pincode', patientdisease= '$patient_disease'
                 patientdoctor= '$patient_doctoryes'
