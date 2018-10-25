@@ -13,7 +13,7 @@ $user_name = $_POST["username"];
 
 $mysql_qry4= "update login
             set prevpatient = '$patient_phone'
-            where username = '$user_name'";
+            where username = '$user_name';";
 $result5= mysqli_query($conn, $mysql_qry4);
 
 
@@ -24,10 +24,10 @@ if(mysqli_num_rows($result1) > 0)
 {
 $row= mysqli_fetch_row($result1);
  $mysql_qry2 = "update patienttable 
-                set patientname = '$patient_name', patientage= '$patient_age', 
+                SET patientname = '$patient_name', patientage= '$patient_age', 
                 patientlocation= '$patient_pincode', patientdisease= '$patient_disease'
                 patientdoctor= '$patient_doctoryes'
-                where patientphone = '$patient_phone';";
+                WHERE patientphone = '$patient_phone';";
 $result2= mysqli_query($conn, $mysql_qry2);
 echo "Patient details uploaded";
 }
