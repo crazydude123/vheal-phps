@@ -23,11 +23,11 @@ $flag = 0;
 if(mysqli_num_rows($result1) > 0) 
 {
 $row= mysqli_fetch_row($result1);
-$mysql_qry2 = "update patienttable 
+$mysql_qry2 = "UPDATE patienttable 
                 SET patientname = '$patient_name', patientage= '$patient_age', 
                     patientlocation= '$patient_pincode', patientdisease= '$patient_disease'
                     patientdoctor= '$patient_doctoryes'
-                WHERE patientphone === '$patient_phone';";
+                WHERE patientphone='$patient_phone';";
 $result2= mysqli_query($conn, $mysql_qry2);
 if($conn->query($mysql_qry2) === TRUE){
 echo "Patient details uploaded";
