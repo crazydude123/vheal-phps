@@ -31,7 +31,7 @@ if($conn->query($mysql_qry2) === TRUE){
 echo "Patient details uploaded";
 }
 else
-echo "idgaf";
+echo "Server Error: idgaf";
 }
 else if(mysqli_num_rows($result1) === 0){
      $flag=1;
