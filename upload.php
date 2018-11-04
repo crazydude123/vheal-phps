@@ -18,7 +18,7 @@
  
  $check = mysqli_stmt_affected_rows($stmt);
  
- if($check == 1){
+ if($check === 1){
  echo "Image Uploaded Successfully";
  }else{
  echo "Error Uploading Image";
